@@ -9,7 +9,16 @@ Package for importing and running Go dApps.
 6. [Licensing](#licensing) 
 
 ### About
-The idea behind **dImports** is to be able to import and run Go dApps or code that is external to the executing program. Primarily designed for use with [Dero](https://dero.io) dApps, **dImports** aims to give users easy access to libraries of powerful dApps. Currently the `dimport` package is using [gore](https://github.com/x-motemen/gore) to import a Go package and run its `StartApp()`.
+![goMod](https://img.shields.io/github/go-mod/go-version/dReam-dApps/dImports.svg)![goReport](https://goreportcard.com/badge/github.com/dReam-dApps/dImports)[![goDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/dReam-dApps/dImports)
+The idea behind **dImports** is to be able to import and run Go dApps or code that is external to the executing program. Primarily designed for use with [Dero](https://dero.io) dApps, **dImports** aims to give users easy access to libraries of powerful dApps. 
+
+Currently the `dimport` package is using [gore](https://github.com/x-motemen/gore) to import a Go package from *any given path* and run its `StartApp()`. It includes a [Fyne](https://fyne.io) widget import for GUI use which is demonstrated in `cmd/dImporter-gui`.
+
+
+
+View latest [release](https://github.com/dReam-dApps/dImports/releases)
+
+![windowsOS](https://raw.githubusercontent.com/SixofClubsss/dreamdappsite/main/assets/os-windows-green.svg)![macOS](https://raw.githubusercontent.com/SixofClubsss/dreamdappsite/main/assets/os-macOS-green.svg)![linuxOS](https://raw.githubusercontent.com/SixofClubsss/dreamdappsite/main/assets/os-linux-green.svg)
 
 ### StartApp
 Simply put, `StartApp()` is a exportable version of a `main()`. It contains the overall logic and control flow of a application. To build a `StartApp()` that can be dimported, write a function called StartApp in a Go package and publish it. 
