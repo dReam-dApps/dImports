@@ -6,7 +6,7 @@ require (
 	fyne.io/fyne/v2 v2.3.1
 	github.com/chzyer/readline v1.5.1
 	github.com/civilware/Gnomon v0.0.0-20230706132518-bda82e989415
-	github.com/dReam-dApps/dReams v0.10.1-0.20230830205050-5b29b5776f7b
+	github.com/dReam-dApps/dReams v0.10.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/x-motemen/gore v0.5.6
 )
