@@ -54,6 +54,6 @@ func main() {
 	}()
 
 	// Set app content with background and import widget then run
-	w.SetContent(container.NewMax(menu.BackgroundRast(app_tag), bundle.NewAlpha150(), container.NewCenter(dimport.ImportWidget(&d))))
+	w.SetContent(container.NewStack(menu.BackgroundRast(app_tag), bundle.NewAlpha150(), container.NewCenter(dimport.ImportWidget(&d))))
 	w.ShowAndRun()
 }
