@@ -4,6 +4,7 @@ go 1.20
 
 require (
 	fyne.io/fyne/v2 v2.4.1
+	github.com/blang/semver/v4 v4.0.0
 	github.com/chzyer/readline v1.5.1
 	github.com/civilware/Gnomon v0.0.0-20231218151558-0ee387e75195
 	github.com/dReam-dApps/dReams v0.11.0
@@ -16,7 +17,6 @@ require (
 	fyne.io/x/fyne v0.0.0-20230411205836-1ca0ead20763 // indirect
 	github.com/VictoriaMetrics/metrics v1.24.0 // indirect
 	github.com/beevik/ntp v1.3.0 // indirect
-	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/caarlos0/env/v6 v6.10.1 // indirect
 	github.com/cenkalti/hub v1.0.1 // indirect
 	github.com/cenkalti/rpc2 v0.0.0-20210604223624-c1acbc6ec984 // indirect

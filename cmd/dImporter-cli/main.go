@@ -57,7 +57,7 @@ func main() {
 	// Initialize channel for closing
 	done := make(chan struct{})
 
-	logger.Printf("[%s] Starting app, enter 'help' for list of commands\n", app_tag)
+	logger.Printf("[%s] %s Starting app, enter 'help' for list of commands\n", app_tag, dimport.Version().String())
 
 	// Routine to update read line prompt
 	go func() {

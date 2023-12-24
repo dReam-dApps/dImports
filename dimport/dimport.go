@@ -13,6 +13,7 @@ import (
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
+	"github.com/blang/semver/v4"
 	"github.com/civilware/Gnomon/structures"
 	dreams "github.com/dReam-dApps/dReams"
 	"github.com/sirupsen/logrus"
@@ -20,6 +21,13 @@ import (
 )
 
 var logger = structures.Logger.WithFields(logrus.Fields{})
+
+var version = semver.MustParse("0.1.0-dev")
+
+// Get current package version
+func Version() semver.Version {
+	return version
+}
 
 // Import a Go package with Gore and call its package.StartApp(),
 // path should be structured as github.com/user/repo/package
