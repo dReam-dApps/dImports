@@ -8,7 +8,7 @@ import (
 	"github.com/chzyer/readline"
 	"github.com/civilware/Gnomon/structures"
 	"github.com/dReam-dApps/dImports/dimport"
-	"github.com/dReam-dApps/dReams/menu"
+	"github.com/dReam-dApps/dReams/gnomes"
 	"github.com/sirupsen/logrus"
 )
 
@@ -37,7 +37,7 @@ func main() {
 	runtime.GOMAXPROCS(n)
 
 	// Initialize logrus logger to stdout
-	menu.InitLogrusLog(logrus.InfoLevel)
+	gnomes.InitLogrusLog(logrus.InfoLevel)
 
 	// Function to set read line prompt text
 	setPrompt := func() string {
@@ -57,7 +57,7 @@ func main() {
 	// Initialize channel for closing
 	done := make(chan struct{})
 
-	logger.Printf("[%s] Starting app, enter 'help' for list of commands\n", app_tag)
+	logger.Printf("[%s] %s Starting app, enter 'help' for list of commands\n", app_tag, dimport.Version().String())
 
 	// Routine to update read line prompt
 	go func() {

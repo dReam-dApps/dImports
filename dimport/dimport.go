@@ -13,6 +13,7 @@ import (
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
+	"github.com/blang/semver/v4"
 	"github.com/civilware/Gnomon/structures"
 	dreams "github.com/dReam-dApps/dReams"
 	"github.com/sirupsen/logrus"
@@ -20,6 +21,13 @@ import (
 )
 
 var logger = structures.Logger.WithFields(logrus.Fields{})
+
+var version = semver.MustParse("0.1.0-dev")
+
+// Get current package version
+func Version() semver.Version {
+	return version
+}
 
 // Import a Go package with Gore and call its package.StartApp(),
 // path should be structured as github.com/user/repo/package
@@ -51,9 +59,9 @@ func ImportAndStartApp(path string) (err error) {
 	}
 
 	// Get commit hash of main branch from github
-	hash := GetCommitHash(split[l-3], split[l-2])
+	// hash := GetCommitHash(split[l-3], split[l-2])
 	logger.Println("[ImportAndStartApp] Importing:", path)
-	logger.Println("[ImportAndStartApp] Commit:", hash)
+	// logger.Println("[ImportAndStartApp] Commit:", hash)
 
 	// Call the package's StartApp()
 	start_cmd := fmt.Sprintf("%s.StartApp()", split[l-1])
@@ -76,7 +84,7 @@ func ImportWidget(d *dreams.AppObject) fyne.CanvasObject {
 
 	default_dapps := []string{
 		"github.com/SixofClubsss/Baccarat/baccarat",
-		"github.com/SixofClubsss/derbnbDesktop/derbnb",
+		// "github.com/SixofClubsss/Grokked/grok",
 		"github.com/SixofClubsss/dPrediction/prediction",
 		"github.com/SixofClubsss/Duels/duel",
 		"github.com/SixofClubsss/Holdero/holdero",
@@ -89,6 +97,7 @@ func ImportWidget(d *dreams.AppObject) fyne.CanvasObject {
 	loading.Hide()
 
 	import_button := widget.NewButton("Import", nil)
+	import_button.Importance = widget.HighImportance
 	import_button.OnTapped = func() {
 		go func() {
 			label.SetText(fmt.Sprintf("Running %s.StartApp()", path.Base(path_entry.Text)))
