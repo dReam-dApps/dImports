@@ -15,6 +15,7 @@ import (
 	"github.com/dReam-dApps/dImports/dimport"
 	dreams "github.com/dReam-dApps/dReams"
 	"github.com/dReam-dApps/dReams/bundle"
+	"github.com/dReam-dApps/dReams/gnomes"
 	"github.com/dReam-dApps/dReams/menu"
 	"github.com/sirupsen/logrus"
 )
@@ -27,7 +28,7 @@ func main() {
 	runtime.GOMAXPROCS(n)
 
 	// Initialize logger to Stdout
-	menu.InitLogrusLog(logrus.InfoLevel)
+	gnomes.InitLogrusLog(logrus.InfoLevel)
 
 	// Initialize Fyne app and window into AppObject
 	a := app.New()
@@ -39,7 +40,7 @@ func main() {
 	w.SetMaster()
 
 	// Initialize background image and AppObject
-	dreams.Theme.Img = *canvas.NewImageFromResource(bundle.ResourceBackgroundPng)
+	menu.Theme.Img = *canvas.NewImageFromResource(bundle.ResourceBackground100Png)
 	d := dreams.AppObject{
 		App:    a,
 		Window: w}

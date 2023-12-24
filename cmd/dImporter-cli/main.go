@@ -8,7 +8,7 @@ import (
 	"github.com/chzyer/readline"
 	"github.com/civilware/Gnomon/structures"
 	"github.com/dReam-dApps/dImports/dimport"
-	"github.com/dReam-dApps/dReams/menu"
+	"github.com/dReam-dApps/dReams/gnomes"
 	"github.com/sirupsen/logrus"
 )
 
@@ -37,7 +37,7 @@ func main() {
 	runtime.GOMAXPROCS(n)
 
 	// Initialize logrus logger to stdout
-	menu.InitLogrusLog(logrus.InfoLevel)
+	gnomes.InitLogrusLog(logrus.InfoLevel)
 
 	// Function to set read line prompt text
 	setPrompt := func() string {
