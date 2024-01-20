@@ -23,7 +23,6 @@ var help_string = `Help menu
 	Example paths:
 
 	"github.com/SixofClubsss/Baccarat/baccarat",
-	"github.com/SixofClubsss/derbnbDesktop/derbnb",
 	"github.com/SixofClubsss/dPrediction/prediction",
 	"github.com/SixofClubsss/Duels/duel",
 	"github.com/SixofClubsss/Holdero/holdero",

@@ -22,7 +22,7 @@ import (
 
 var logger = structures.Logger.WithFields(logrus.Fields{})
 
-var version = semver.MustParse("0.1.1")
+var version = semver.MustParse("0.1.2")
 
 // Get current package version
 func Version() semver.Version {
